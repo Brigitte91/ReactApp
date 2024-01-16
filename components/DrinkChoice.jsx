@@ -1,12 +1,16 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable */
 import './DrinkChoice.css';
+import { Button } from './UI/Button';
 
-export const DrinkChoice = ({ drink }) => {
+export const DrinkChoice = ({ drink, clickFn }) => {
+
+
     return (
         <>
             <h2>Your choice: {drink.name}</h2>
             <img src={drink.imgUrl} width={100} height={100} alt={drink.alt} />
             <p>Your drink will be ready in a few minutes</p>
+            <Button className="button" text={'Return'} clickFn={clickFn} />
         </>
     );
 };

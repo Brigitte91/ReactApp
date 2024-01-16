@@ -1,11 +1,15 @@
 /* eslint-disable react/prop-types */
 import './Button.css';
 
-export const Button = ({ text }) => {
+export const Button = ({ text, clickFn }) => {
+    const clickHandler = () => {
+        clickFn();
+    }
 
     return (
 
-        <button className='button' >{text}</button>
+        <button className='button' onClick={clickHandler}>{text}</button>
 
     )
 }
+

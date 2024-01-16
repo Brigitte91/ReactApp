@@ -7,9 +7,13 @@ export const DrinkItem = ({ drink, clickFn }) => {
     }
 
     return (
-        <button className="drinkItem" onClick={clickHandler}>
-            <img src={drink.imgUrl} width={50} height={50} alt={drink.alt} />
-            <p>{drink.name}</p>
-        </button>
+        <div>
+            <button className="drinkItem" onClick={clickHandler}>
+                <img src={drink.imgUrl} width={50} height={50} alt={drink.alt} />
+                <p>{drink.name}</p>
+
+            </button>
+
+        </div>
     );
 };
