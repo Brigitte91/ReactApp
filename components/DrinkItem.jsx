@@ -1,12 +1,15 @@
 /* eslint-disable */
 import './UI/DrinkItem.css';
 
-export const DrinkItem = ({drink}) => {
+export const DrinkItem = ({ drink, clickFn }) => {
+    const clickHandler = () => {
+        clickFn(drink);
+    }
+
     return (
-        <div className="drinkItem">
+        <button className="drinkItem" onClick={clickHandler}>
             <img src={drink.imgUrl} width={50} height={50} alt={drink.alt} />
-            <h2>{drink.name}</h2>
-            
-        </div>
+            <p>{drink.name}</p>
+        </button>
     );
 };
