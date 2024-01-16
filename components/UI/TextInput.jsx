@@ -1,10 +1,10 @@
 /* eslint-disable */
+import { Input } from '@chakra-ui/react'
 
-import './TextInput.css'
-export const TextInput = ({ changeFn }) => {
+export const TextInput = ({ changeFn, ...props }) => {
     return (
 
-        <input className="text-input" onChange={changeFn}></input>
+        <Input onChange={changeFn} variant={'filled'} focusBorderColor='teal.700' {...props} />
 
     )
 }

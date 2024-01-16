@@ -4,6 +4,7 @@ import { useState } from 'react';
 import './App.css';
 import { DrinkChoice } from '../components/DrinkChoice';
 import { DrinkSearch } from '../components/DrinkSearch';
+import { Heading } from '@chakra-ui/react';
 
 
 export const App = () => {
@@ -21,7 +22,7 @@ export const App = () => {
         <DrinkChoice drink={userDrink} clickFn={clickReturn} />
       ) : (
         <>
-          <h1>{greeting}</h1>
+          <Heading mb={8} fontSize={'3xl'} color={'teal.700'}>{greeting}</Heading>
 
           <DrinkSearch clickFn={setUserDrink} />
         </>

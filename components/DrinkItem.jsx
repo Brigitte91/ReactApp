@@ -1,5 +1,6 @@
 /* eslint-disable */
-import './UI/DrinkItem.css';
+
+import { Center, Image, Text } from '@chakra-ui/react'
 
 export const DrinkItem = ({ drink, clickFn }) => {
     const clickHandler = () => {
@@ -7,13 +8,13 @@ export const DrinkItem = ({ drink, clickFn }) => {
     }
 
     return (
-        <div>
-            <button className="drinkItem" onClick={clickHandler}>
-                <img src={drink.imgUrl} width={50} height={50} alt={drink.alt} />
-                <p>{drink.name}</p>
 
-            </button>
+        <Center gap={16} onClick={clickHandler} cursor={'pointer'} w={300} mb={4} p={4} boxShadow={'md'} rounded={'md'} justifyContent={'center'} alignItems={'center'}>
+            <Image src={drink.imgUrl} width={20} height={20} alt={drink.alt} />
+            <Text fontSize={'xl'} color={'teal.500'}>{drink.name}</Text>
 
-        </div>
+        </Center>
+
+
     );
 };
